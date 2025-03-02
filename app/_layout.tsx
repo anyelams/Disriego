@@ -1,3 +1,4 @@
+import React from "react";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
@@ -30,7 +31,16 @@ export default function PublicLayout() {
           headerShown: false,
           contentStyle: { marginHorizontal: 0, paddingHorizontal: 0 },
         }}
-      ></Stack>
+      >
+        <Stack.Screen name="index" />
+        <Stack.Screen name="(auth)" />
+        <Stack.Screen
+          name="(protected)"
+          options={{
+            headerShown: false,
+          }}
+        />
+      </Stack>
       <StatusBar style="auto" />
     </>
   );

@@ -36,7 +36,7 @@ export default function LoginScreen() {
 
       if (response.ok) {
         Alert.alert("Éxito", "Login exitoso");
-        router.push("/profile");
+        router.replace("/(protected)");
       } else {
         Alert.alert("Error", data.detail || "Datos inválidos");
       }
